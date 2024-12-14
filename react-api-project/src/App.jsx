@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import backGround from './assets/ME-background-img.jpeg';
 
 function App() {
 
@@ -47,7 +48,9 @@ function App() {
 
   return (
     <div>
+      <img src={backGround} alt="Map of Middle-Earth" className='bg-img'/>
       <h1>Search for a Character from the works of Tolkien</h1>
+      <h2>Click their name to go to their Wiki page</h2>
       <input 
         type="text"
         placeholder='ex. Aragorn'
