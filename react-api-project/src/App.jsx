@@ -38,12 +38,12 @@ function App() {
 
   // Message to display if data is loading.
   if (isLoading) {
-    return <div className='loading-state-msg'>Loading...</div>;
+    return <div className='loading-state-msg'><p>Loading...</p></div>;
   }
 
   // Message to display if an error has occurred.
   if (error) {
-    return <div className='loading-state-msg'>Something went wrong. Try refreshing the page.</div>
+    return <div className='loading-state-msg'><p>Something went wrong. Try refreshing the page.</p></div>
   }
 
   return (

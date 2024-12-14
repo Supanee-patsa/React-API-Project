@@ -5,6 +5,19 @@
   text-align: center;
 }
 
+.loading-state-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.loading-state-msg p {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
 .bg-img {
   position: fixed;
   left: 0px;
