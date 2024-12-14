@@ -5,6 +5,7 @@ import './App.css'
 function App() {
 
   const [search, setSearch] = useState("");
+  const [data, setData] = useState([]);
 
   useEffect (() => {
     const headers = {
@@ -28,7 +29,7 @@ function App() {
 
     };
     
-    fetchAllCharacters().then(characters => console.log(characters))
+    fetchAllCharacters().then(characters => setData(characters))
 
   }, [])
 
@@ -40,6 +41,19 @@ function App() {
         value={search}
         onChange={(e) => setSearch(e.target.value)} 
       />
+
+      {data.filter((character) =>{
+        return (
+          search.toLowerCase() === "" ? character : character.name.toLowerCase().includes(search)
+        )
+      }).map((character, index) => (
+      
+      <ul key={index}>
+        <li><a href={character.wikiUrl}>{character.name}</a></li>
+      </ul>
+      
+    ))}
+
     </div>
   )
 }
