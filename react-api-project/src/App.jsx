@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import backGround from './assets/ME-background-img.jpeg';
+import ScrollButton from "./components/topbutton.jsx"
 
 function App() {
 
@@ -57,6 +58,8 @@ function App() {
         value={search}
         onChange={(e) => setSearch(e.target.value)} 
       />
+
+      <ScrollButton />
 
       {data.filter((character) =>{
         return (
